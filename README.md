@@ -1,1 +1,1 @@
-# Spring-Practice
+# Some practice using Spring Framework

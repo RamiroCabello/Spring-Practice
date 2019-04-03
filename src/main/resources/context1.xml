@@ -1,0 +1,85 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+		 	               http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+    <!--
+        By default scope is set in Singleton
+        So everytime you call for a bean it gives you the same instance
+    -->
+    <bean id="ramiro"
+          class="rama.spring.practice.beans.Student">
+
+        <property name="name">
+            <value>Ramiro</value>
+        </property>
+        <property name="lastName">
+            <value>Cabello</value>
+        </property>
+
+        <property name="courses">
+            <list>
+                <ref bean="java"/>
+                <ref bean="scala"/>
+                <ref bean="node.js"/>
+            </list>
+        </property>
+
+    </bean>
+
+    <bean id="java"
+          class="rama.spring.practice.beans.Course">
+
+        <property name="name">
+            <value>Java</value>
+        </property>
+        <property name="amountHours">
+            <value>30</value>
+        </property>
+    </bean>
+
+    <bean id="scala"
+          class="rama.spring.practice.beans.Course">
+
+        <property name="name">
+            <value>Scala</value>
+        </property>
+        <property name="amountHours">
+            <value>50</value>
+        </property>
+    </bean>
+
+    <bean id="node.js"
+          class="rama.spring.practice.beans.Course">
+
+        <property name="name">
+            <value>Node.js</value>
+        </property>
+        <property name="amountHours">
+            <value>40</value>
+        </property>
+    </bean>
+
+    <bean id="html5"
+          class="rama.spring.practice.beans.Course">
+
+        <property name="name">
+            <value>HTML5</value>
+        </property>
+        <property name="amountHours">
+            <value>25</value>
+        </property>
+
+        <property name="content">
+            <map>
+                <entry key="Intro" value="Markup Language, Browsers, .."/>
+                <entry key="Properties" value="Text, Border, Margin" />
+            </map>
+
+        </property>
+
+    </bean>
+
+
+</beans>

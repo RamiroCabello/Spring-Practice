@@ -1,0 +1,36 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+		 	               http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+    <!--
+        Prototype gives a new instance everytime you call for a bean
+    -->
+
+    <bean id="php"
+          class="rama.spring.practice.beans.Course" scope="prototype">
+
+        <property name="name">
+            <value>PHP</value>
+        </property>
+
+        <property name="amountHours">
+            <value>35</value>
+        </property>
+    </bean>
+
+    <bean id="ruby"
+          class="rama.spring.practice.beans.Course">
+
+        <property name="name">
+            <value>Ruby</value>
+        </property>
+        <property name="amountHours">
+            <value>20</value>
+        </property>
+    </bean>
+
+
+
+</beans>
